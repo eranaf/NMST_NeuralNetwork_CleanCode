@@ -6,7 +6,7 @@ def sigma(z):
     return 1.0 / (1 + np.exp(-z))
 
 
-class NeuralNetworks:
+class ModelMultiLayeredNetwork:
     def __init__(self, sizes, howToInitialize, epoch):
         """
         :param sizes: [number of inputs, number of neurons in the first hidden layer,., number of neurons in the output layer]
@@ -30,10 +30,3 @@ class NeuralNetworks:
             out_all = sigma(np.add(np.dot(weight, out_all),bias))
         # to be equal form to feedforward() -> [np.array(x) for x in np.transpose(out_all)]
         return out_all
-
-
-N=NeuralNetworks([784,4,10], "normal", 10)
-N
-from Data.NMST_Data_Reader import NMST_Data_Reader
-
-D = NMST_Data_Reader()
