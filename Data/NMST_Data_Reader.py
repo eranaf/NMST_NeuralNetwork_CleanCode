@@ -41,6 +41,15 @@ class NMST_Data_Reader:
             self.train_position = self.train_position + size
         return self.unzip_batch(batch)
 
+    def get_train_batch_generator(self, size):
+        """return a batch in size "size" from the type train, every time it increase the place we take from.
+        when get to the edge and ask for another batch' it send you a message to suffel
+        when it before the end but have less then 'size' element it return need to shuffle"""
+        self.shuffle_train()
+        while self.train_position + size < len(self.train):
+            yield self.unzip_batch(self.train[self.train_position:self.train_position + size])
+            self.train_position = self.train_position + size
+
     def shuffle_train(self):
         np.random.shuffle(self.train)
         self.train_position = 0
@@ -84,7 +93,7 @@ class NMST_Data_Reader:
         image_size = 28  # each image is 28x28
 
         num_images = 60000  # there are 60k images
-        with gzip.open('train-images-idx3-ubyte.gz', 'r') as f:  # 60k train & valid
+        with gzip.open(r'train-images-idx3-ubyte.gz', 'r') as f:  # 60k train & valid
             f.read(16)  # reading by 16-byte double
             buffer_Train_Images = f.read(image_size * image_size * num_images)
             f.close()
@@ -119,3 +128,5 @@ class NMST_Data_Reader:
     def result_to_vector(results):
         """take number 0-9 and transform it to a vector with one in the place of results [0..1..0]"""
         return [vectorized_result(x) for x in results]
+
+

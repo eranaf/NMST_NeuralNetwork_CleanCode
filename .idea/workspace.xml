@@ -2,9 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc4b57e1-a910-4722-8fbb-46b4fa0971d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Predict_functions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Predict_functions/accuracy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trainer/Trainer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Trainer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activationFunctions/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/activationFunctions/sigma.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gadientCalc/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gadientCalc/back_prop.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/losses/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/losses/losses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metrics/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metrics/metrics.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/optimizers/SGD.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/optimizers/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/save_result.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/NMST_Data_Reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/NMST_Data_Reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Model/ModelMultiLayeredNetwork.py" beforeDir="false" afterPath="$PROJECT_DIR$/Model/ModelMultiLayeredNetwork.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_train.py" afterDir="false" />
     </list>
@@ -54,7 +69,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Dataa" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,6 +79,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ערן אפללו\PycharmProjects\NMST_NeuralNetwork_CleanCode" />
       <recent name="C:\Users\ערן אפללו\PycharmProjects\NMST_NeuralNetwork_CleanCode\Dataa" />
       <recent name="C:\Users\ערן אפללו\PycharmProjects\NMST_NeuralNetwork_CleanCode\Data" />
     </key>
@@ -193,7 +209,10 @@
       <option name="presentableId" value="Default" />
       <updated>1595519050580</updated>
       <workItem from="1595519052091" duration="4949000" />
-      <workItem from="1595606042991" duration="21453000" />
+      <workItem from="1595606042991" duration="31488000" />
+      <workItem from="1595781481678" duration="11059000" />
+      <workItem from="1595970637970" duration="15754000" />
+      <workItem from="1596054214734" duration="31528000" />
     </task>
     <task id="LOCAL‎00001" summary="starting this project">
       <created>1595519480836</created>
@@ -213,7 +232,13 @@
       <option name="presentableId" value="LOCAL‎00003" />
       <updated>1595695964011</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL‎00004" summary="add main function">
+      <created>1595699074402</created>
+      <option name="number" value="LOCAL‎00004" />
+      <option name="presentableId" value="LOCAL‎00004" />
+      <updated>1595699074402</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,92 +298,116 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="72" key="#Code_Folding/0.0.1536.824@0.0.1536.824" timestamp="1595687264012" />
+    <state x="361" y="72" key="#Inspections" timestamp="1596055980715">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="72" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1596055980714" />
     <state x="384" y="40" key="#NMST_Data_Reader" timestamp="1595696609140">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="384" y="40" key="#NMST_Data_Reader/0.0.1536.824@0.0.1536.824" timestamp="1595696609140" />
+    <state x="361" y="72" key="#Notifications" timestamp="1595972505011">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="72" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1595972505011" />
     <state x="410" y="187" width="1089" height="575" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595694120385">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="410" y="187" width="1089" height="575" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1595694120385" />
+    <state x="537" y="216" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595783073876">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="537" y="216" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1595783073876" />
     <state x="277" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1595695544280">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1595695544280" />
-    <state x="353" y="8" key="CommitChangelistDialog2" timestamp="1595695963055">
+    <state x="353" y="8" key="CommitChangelistDialog2" timestamp="1595699073552">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="353" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595695963055" />
-    <state width="491" height="466" key="DebuggerActiveHint" timestamp="1595521693256">
+    <state x="353" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1595699073552" />
+    <state width="743" height="466" key="DebuggerActiveHint" timestamp="1596202297142">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="491" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1595521693256" />
-    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1595694117622">
+    <state width="743" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1596202297142" />
+    <state x="147" y="71" key="DiffContextDialog" timestamp="1595784897393">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595694117622" />
+    <state x="147" y="71" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1595784897393" />
+    <state x="549" y="168" key="FileChooserDialogImpl" timestamp="1595971876069">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="168" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595971876069" />
     <state x="584" y="307" key="Github.ShareDialog" timestamp="1595520363222">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="584" y="307" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1595520363222" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1595699054977">
+    <state width="1493" height="344" key="GridCell.Tab.0.bottom" timestamp="1596355785774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595699054977" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1595699054977">
+    <state width="1493" height="344" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596355785774" />
+    <state width="1493" height="344" key="GridCell.Tab.0.center" timestamp="1596355785774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595699054977" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1595699054977">
+    <state width="1493" height="344" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596355785774" />
+    <state width="1493" height="344" key="GridCell.Tab.0.left" timestamp="1596355785774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595699054977" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1595699054977">
+    <state width="1493" height="344" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596355785774" />
+    <state width="1493" height="344" key="GridCell.Tab.0.right" timestamp="1596355785774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595699054977" />
-    <state width="1493" height="208" key="GridCell.Tab.1.bottom" timestamp="1595699054882">
+    <state width="1493" height="344" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596355785774" />
+    <state width="1493" height="344" key="GridCell.Tab.1.bottom" timestamp="1596355785774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595699054882" />
-    <state width="1493" height="208" key="GridCell.Tab.1.center" timestamp="1595699054882">
+    <state width="1493" height="344" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596355785774" />
+    <state width="1493" height="344" key="GridCell.Tab.1.center" timestamp="1596355785774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595699054882" />
-    <state width="1493" height="208" key="GridCell.Tab.1.left" timestamp="1595699054882">
+    <state width="1493" height="344" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596355785774" />
+    <state width="1493" height="344" key="GridCell.Tab.1.left" timestamp="1596355785774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595699054882" />
-    <state width="1493" height="208" key="GridCell.Tab.1.right" timestamp="1595699054882">
+    <state width="1493" height="344" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596355785774" />
+    <state width="1493" height="344" key="GridCell.Tab.1.right" timestamp="1596355785774">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595699054882" />
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1595695979490">
+    <state width="1493" height="344" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596355785774" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2" timestamp="1595784899927">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595695979490" />
+    <state x="361" y="146" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1595784899927" />
+    <state x="567" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595971908369">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="567" y="103" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1595971908369" />
     <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1595688394118">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1595688394118" />
+    <state x="463" y="144" width="609" height="536" key="find.popup" timestamp="1596287990525">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="463" y="144" width="609" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1596287990525" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Model/ModelMultiLayeredNetwork.py</url>
-          <line>34</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/Data/NMST_Data_Reader.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main_train.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="12" />
+          <line>31</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main_train.py</url>
-          <line>12</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/save_result.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -371,9 +420,9 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/NMST_NeuralNetwork_CleanCode$model.coverage" NAME="model Coverage Results" MODIFIED="1595695195869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
-    <SUITE FILE_PATH="coverage/NMST_NeuralNetwork_CleanCode$NMST_Data_Reader.coverage" NAME="NMST_Data_Reader Coverage Results" MODIFIED="1595696872200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data" />
-    <SUITE FILE_PATH="coverage/NMST_NeuralNetwork_CleanCode$main_train.coverage" NAME="main_train Coverage Results" MODIFIED="1595699054840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NMST_NeuralNetwork_CleanCode$model.coverage" NAME="model Coverage Results" MODIFIED="1595703847823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Model" />
+    <SUITE FILE_PATH="coverage/NMST_NeuralNetwork_CleanCode$NMST_Data_Reader.coverage" NAME="NMST_Data_Reader Coverage Results" MODIFIED="1595715796692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data" />
+    <SUITE FILE_PATH="coverage/NMST_NeuralNetwork_CleanCode$main_train.coverage" NAME="main_train Coverage Results" MODIFIED="1596288671799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NMST_NeuralNetwork_CleanCode$data.coverage" NAME="data Coverage Results" MODIFIED="1595686852658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Data" />
   </component>
 </project>
